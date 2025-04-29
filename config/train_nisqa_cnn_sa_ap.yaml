@@ -2,8 +2,8 @@
 
 # Runname and paths
 name: training_run_name # name of current training run
-data_dir: C:/Users/Name/Downloads/NISQA_Corpus # main input dir with dataset samples and csv files
-output_dir: C:/Users/Name/Downloads/trained_models # output dir, a new subfolder for current run will be created with yaml, results csv, and stored model weights
+data_dir: /home/intella/NISQA/NISQA_Corpus # main input dir with dataset samples and csv files
+output_dir: /home/intella/NISQA/trained_models # output dir, a new subfolder for current run will be created with yaml, results csv, and stored model weights
 pretrained_model: false
 
 # Dataset options
@@ -52,7 +52,7 @@ ms_max_segments: 1300 # max segment length (in bins). if samples of different du
 ms_channel: null # audio channel in case of stereo file (0->left, 1->right). if null, mono mix is used
 
 # Main model
-model: NISQA # 'NISQA' single-ended | 'NISQA_DIM' single-ended with multidimension prediction | 'NISQA_DE' double-ended 
+model: NISQA_DIM # 'NISQA' single-ended | 'NISQA_DIM' single-ended with multidimension prediction | 'NISQA_DE' double-ended 
 
 # Framewise options (usually CNN)  
 cnn_model: adapt # framewise model, either 'adapt' for CNN with adaptive maxpooling | 'standard' for standard CNN | 'dff' for deep feed-forward network | 'skip' to skip framewise modelling
